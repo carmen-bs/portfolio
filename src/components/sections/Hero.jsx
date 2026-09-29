@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, Star } from "lucide-react";
 import {
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
+  SiPython,
+  SiJavascript,
   SiReact,
-  SiTailwindcss,
+  SiFastapi,
+  SiSupabase,
 } from "react-icons/si";
 import ScrollReveal from "../animations/ScrollReveal";
 
@@ -54,11 +54,11 @@ export default function Hero() {
   };
 
   const stats = [
-    { value: "3+", label: "Years\nExperience" },
-    { value: "50+", label: "Projects\nCompleted" },
-    { value: "15+", label: "Technologies\nUsed" },
-    { value: "98%", label: "Client\nSatisfaction" },
-  ];
+    { value: "DAM", label: "Formación\nMultiplataforma" },
+    { value: "2+", label: "Años\nProgramando" },
+    { value: "1", label: "Proyecto\nFull Stack" },
+    { value: "10+", label: "Tecnologías\nTrabajadas" },
+  ];  
 
   return (
     <section
@@ -92,23 +92,23 @@ export default function Hero() {
             <ScrollReveal delayMs={0}>
               <div className="flex items-center gap-2 rounded-full border border-accent/30 bg-accent/20 h-[40px] w-full max-w-[490px] pl-4 sm:pl-[38px] pr-4 py-1.5 text-xs font-medium text-white">
                 <Star className="h-3.5 w-3.5 shrink-0 fill-white text-white" />
-                <span className="truncate">FullStack Developer &amp; UI/UX Enthusiast | Based in Kigali, RW</span>
+                <span className="truncate">  Desarrolladora Junior | Full Stack</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delayMs={100}>
               <h1 className="mt-6 text-4xl leading-tight tracking-tight text-white sm:text-5xl lg:text-[58px]">
-                Aspiring Developer
+                Desarrolladora
                 <br />
-                Portfolio
+                Junior
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delayMs={200}>
               <p className="mt-7 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-                Building modern, scalable web applications with React, JavaScript,
-                and cutting-edge technologies. Transforming ideas into exceptional
-                digital experiences.
+                Recién graduada en Desarrollo de Aplicaciones Multiplataforma,
+                interesada en el desarrollo web Full Stack y en crear aplicaciones
+                útiles, funcionales y bien estructuradas.
               </p>
             </ScrollReveal>
 
@@ -119,7 +119,7 @@ export default function Hero() {
                   onClick={scrollToContact}
                   className="inline-flex items-center justify-center rounded-[12px] bg-white px-7 py-3 text-sm font-semibold text-black shadow-glow transition hover:bg-zinc-100"
                 >
-                  Get in Touch
+                  Contactar
                 </button>
               </div>
             </ScrollReveal>
@@ -182,7 +182,8 @@ export default function Hero() {
                   />
                   <div className="absolute inset-[3px] rounded-[15px] bg-black" />
                 </div>
-
+                
+                // cambiar imagen 
                 <img
                   src="images/DEV.webp"
                   alt="Developer"
@@ -191,10 +192,10 @@ export default function Hero() {
 
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-5 rounded-full border border-white/10 bg-transparent px-4 py-2.5 text-green-400 backdrop-blur whitespace-nowrap">
                   <SiReact className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiNextdotjs className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiNodedotjs className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiTailwindcss className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiMongodb className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
+                  <SiPython className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
+                  <SiJavascript className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
+                  <SiFastapi className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
+                  <SiSupabase className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
                 </div>
               </div>
             </div>
