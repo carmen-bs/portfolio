@@ -4,7 +4,6 @@ import {
   ChevronRight,
   Globe,
   Layers,
-  Palette,
   Zap,
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -15,109 +14,47 @@ import ProjectCard from "../ui/ProjectCard";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    subtitle: "FULL STACK APP",
+    title: "Movilidad Urbana",
+    subtitle: "APLICACIÓN FULL STACK",
     displayCategory: "Full Stack",
     description:
-      "A modern e-commerce platform designed for fast, seamless shopping experiences. Secure payments and efficient delivery ensure reliability and convenience.",
-    image: "/images/projects/project3.png",
+      "Aplicación web para generar itinerarios urbanos personalizados y visualizar datos de aforo por zonas. Integra rutas, horarios, mapas interactivos, autenticación y gestión de datos.",
+    image: "/images/projects/movilidad-urbana.png",
     category: "Full Stack",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    metric: "40% increase in conversion",
-    demoUrl: "",
-    githubUrl: "",
+    technologies: [
+      "React",
+      "FastAPI",
+      "Python",
+      "Supabase",
+      "Firebase",
+    ],
+    metric: "",
+    demoUrl: "https://movilidad-urbana-front.vercel.app/",
+    githubUrl: "https://github.com/carmen-bs/movilidad-urbana-front",
   },
   {
     id: 2,
-    title: "AI Chat Assistant",
-    subtitle: "WEB APP",
-    displayCategory: "Web Apps",
+    title: "Yumplace",
+    subtitle: "APLICACIÓN ANDROID",
+    displayCategory: "Desarrollo móvil",
     description:
-      "An intelligent AI-powered chat assistant providing instant responses and automating conversations through natural language processing.",
-    image: "/images/projects/project1.png",
-    category: "Web Apps",
-    technologies: ["React", "Node.js", "OpenAI API", "Express"],
-    metric: "60% faster response time",
+      "Aplicación Android desarrollada como proyecto final de DAM. Red social centrada en recetas donde los usuarios pueden publicar fotografías asociadas a recetas y compartirlas con sus seguidores.",
+    image: "/images/projects/yumplace.png",
+    category: "Desarrollo móvil",
+    technologies: [
+      "Java",
+      "Android Studio",
+    ],
+    metric: "",
     demoUrl: "",
-    githubUrl: "",
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    subtitle: "UI COMPONENTS",
-    displayCategory: "UI Components",
-    description:
-      "A modern developer portfolio showcasing projects, skills, and achievements with smooth animations and responsive layouts.",
-    image: "/images/projects/project2.png",
-    category: "UI Components",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    metric: "2K+ GitHub stars",
-    demoUrl: "",
-    githubUrl: "",
-  },
-  {
-    id: 4,
-    title: "Admin Dashboard",
-    subtitle: "FULL STACK APP",
-    displayCategory: "Full Stack",
-    description:
-      "A powerful admin dashboard for managing users, analytics, and system data with real-time insights and interactive charts.",
-    image: "/images/projects/project7.png",
-    category: "Full Stack",
-    technologies: ["React", "Node.js", "Chart.js", "MongoDB"],
-    metric: "1K+ npm downloads",
-    demoUrl: "",
-    githubUrl: "",
-  },
-  {
-    id: 5,
-    title: "Task Management System",
-    subtitle: "FULL STACK APP",
-    displayCategory: "Full Stack",
-    description:
-      "A productivity platform for managing tasks, deadlines, and team collaboration with intuitive dashboards.",
-    image: "/images/projects/project5.png",
-    category: "Full Stack",
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    metric: "500+ active users",
-    demoUrl: "",
-    githubUrl: "",
-  },
-  {
-    id: 6,
-    title: "Weather Forecast App",
-    subtitle: "WEB APP",
-    displayCategory: "Web Apps",
-    description:
-      "A real-time weather application providing accurate forecasts and location-based updates with a clean, minimal UI.",
-    image: "/images/projects/project6.png",
-    category: "Web Apps",
-    technologies: ["React", "Weather API", "Tailwind CSS"],
-    metric: "95% accuracy rate",
-    demoUrl: "",
-    githubUrl: "",
-  },
-  {
-    id: 7,
-    title: "Real-Time Chat App",
-    subtitle: "FULL STACK APP",
-    displayCategory: "Full Stack",
-    description:
-      "A real-time messaging application with live messaging, notifications, and secure authentication built for speed and scalability.",
-    image: "/images/projects/project4.png",
-    category: "Full Stack",
-    technologies: ["React", "Socket.io", "Node.js", "MongoDB"],
-    metric: "10K+ data points/day",
-    demoUrl: "",
-    githubUrl: "",
+    githubUrl: "https://github.com/trifuerza-Yumplace/Yumplace",
   },
 ];
 
 const filterTags = [
-  { id: "all", label: "All", icon: Layers },
-  { id: "Web Apps", label: "Web Apps", icon: Globe },
-  { id: "UI Components", label: "UI Components", icon: Palette },
-  { id: "Full Stack", label: "Full Stack", icon: Zap },
+  { id: "all", label: "Todos", icon: Layers },
+  { id: "Full Stack", label: "Full Stack", icon: Globe },
+  { id: "Desarrollo móvil", label: "Desarrollo móvil", icon: Zap },
 ];
 
 const GAP = 24;
@@ -171,13 +108,15 @@ export default function ProjectsSection() {
           <div className="flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               <Briefcase className="h-3.5 w-3.5" />
-              My Work
+              Mis proyectos
             </div>
+
             <h2 className="mt-5 text-4xl font-bold text-white sm:text-5xl lg:text-[56px]">
-              Featured Projects
+              Proyectos destacados
             </h2>
-            <p className="mt-4 text-sm text-zinc-400 sm:text-base">
-              Showcasing my best work and achievements
+
+            <p className="mt-4 max-w-xl text-sm text-zinc-400 sm:text-base">
+              Proyectos desarrollados durante mi formación y como parte de mi aprendizaje y experiencia en desarrollo de software.
             </p>
           </div>
         </ScrollReveal>
