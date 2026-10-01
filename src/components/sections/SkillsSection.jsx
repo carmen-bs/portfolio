@@ -2,14 +2,14 @@ import {
   Braces,
   Code2,
   GitBranch,
-  LayoutTemplate,
   Link2,
-  MonitorSmartphone,
-  PenTool,
+  Monitor,
   ServerCog,
   Sparkles,
-  SquareCode,
   Zap,
+  Cloud,
+  Database,
+  Terminal,
 } from "lucide-react";
 import ScrollReveal from "../animations/ScrollReveal";
 import RadialGradientBackground from "../backgrounds/RadialGradientBackground";
@@ -17,86 +17,62 @@ import RadialGradientBackground from "../backgrounds/RadialGradientBackground";
 const skillGroups = [
   {
     id: "frontend",
-    title: "Frontend Development",
+    title: "Frontend",
     skills: [
-      { name: "React.js", icon: Code2, experience: "3+ years", level: "Expert", progress: 92 },
-      { name: "JavaScript", icon: Braces, experience: "4+ years", level: "Expert", progress: 95 },
-      { name: "TypeScript", icon: SquareCode, experience: "2+ years", level: "Advanced", progress: 78 },
-      { name: "Next.js", icon: LayoutTemplate, experience: "2+ years", level: "Advanced", progress: 75 },
-      { name: "Tailwind CSS", icon: Zap, experience: "3+ years", level: "Expert", progress: 90 },
+      { name: "React", icon: Code2 },
+      { name: "JavaScript", icon: Braces },
+      { name: "HTML", icon: Code2 },
+      { name: "CSS", icon: Code2 },
+      { name: "Tailwind CSS", icon: Zap },
+      { name: "Vite", icon: Zap },
     ],
   },
   {
     id: "backend",
     title: "Backend & APIs",
     skills: [
-      { name: "Node.js", icon: ServerCog, experience: "2+ years", level: "Intermediate", progress: 65 },
-      { name: "REST APIs", icon: Link2, experience: "3+ years", level: "Advanced", progress: 80 },
+      { name: "Python", icon: ServerCog },
+      { name: "FastAPI", icon: Zap },
+      { name: "Java", icon: Code2 },
+      { name: "REST APIs", icon: Link2 },
+    ],
+  },
+  {
+    id: "database",
+    title: "Bases de datos & Cloud",
+    skills: [
+      { name: "Supabase", icon: Database },
+      { name: "MySQL", icon: Database },
+      { name: "Oracle", icon: Database },
+      { name: "Firebase", icon: Cloud },
+      { name: "Google Cloud", icon: Cloud },
     ],
   },
   {
     id: "tools",
-    title: "Tools & Others",
+    title: "Herramientas",
     skills: [
-      { name: "Git & GitHub", icon: GitBranch, experience: "4+ years", level: "Advanced", progress: 88 },
-      { name: "Responsive Design", icon: MonitorSmartphone, experience: "3+ years", level: "Expert", progress: 92 },
-      { name: "Figma", icon: PenTool, experience: "2+ years", level: "Intermediate", progress: 60 },
-      { name: "Vite", icon: Zap, experience: "1+ years", level: "Advanced", progress: 75 },
+      { name: "Git", icon: GitBranch },
+      { name: "GitHub", icon: GitBranch },
+      { name: "VS Code", icon: Terminal },
+      { name: "Grafana", icon: Monitor },
+      { name: "Android Studio", icon: Code2 },
     ],
   },
 ];
 
-const levelConfig = {
-  Intermediate: {
-    badge: "border-emerald-400/70 bg-emerald-400/15 text-emerald-400",
-    barFrom: "#166534",
-    barTo: "#4ade80",
-  },
-  Expert : {
-    badge: "border-green-500/70 bg-green-500/15 text-green-400",
-    barFrom: "#14532d",
-    barTo: "#22c55e",
-  },
-  Advanced : {
-    badge: "border-teal-500/70 bg-teal-500/15 text-teal-400",
-    barFrom: "#134e4a",
-    barTo: "#2dd4bf",
-  },
-};
-
 function SkillRow({ skill }) {
-  const { icon: Icon, name, experience, level, progress } = skill;
-  const cfg = levelConfig[level] ?? levelConfig.Expert;
+  const { icon: Icon, name } = skill;
 
   return (
-    <div className="py-3.5">
-      <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-accent/30 bg-accent/10 text-accent">
-          <Icon className="h-5 w-5" strokeWidth={1.8} />
-        </div>
-
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center justify-between gap-2">
-            <div>
-              <p className="text-base font-semibold text-white leading-tight">{name}</p>
-              <p className="text-xs text-zinc-500 mt-0.5">{experience}</p>
-            </div>
-            <span className={`shrink-0 rounded-full border px-3.5 py-1 text-xs font-bold ${cfg.badge}`}>
-              {level}
-            </span>
-          </div>
-
-          <div className="mt-3 h-[3px] w-full overflow-hidden rounded-full bg-zinc-800">
-            <div
-              className="h-full rounded-full"
-              style={{
-                width: `${progress}%`,
-                background: `linear-gradient(to right, ${cfg.barFrom}, ${cfg.barTo})`,
-              }}
-            />
-          </div>
-        </div>
+    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-all duration-300 hover:border-accent/40 hover:bg-accent/10">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-accent/30 bg-accent/10 text-accent">
+        <Icon className="h-5 w-5" strokeWidth={1.8} />
       </div>
+
+      <p className="text-sm font-semibold text-white">
+        {name}
+      </p>
     </div>
   );
 }
@@ -127,10 +103,10 @@ function SkillCard({ group, delayMs }) {
           <h3 className="text-lg font-bold text-white">{group.title}</h3>
         </div>
 
-        <div className="mb-1 h-px w-full bg-white/5" />
+        <div className="mb-5 h-px w-full bg-white/5" />
 
-        <div className="divide-y divide-white/5">
-          {group.skills.map(skill => (
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {group.skills.map((skill) => (
             <SkillRow key={skill.name} skill={skill} />
           ))}
         </div>
@@ -153,18 +129,18 @@ export default function SkillsSection() {
           <div className="flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               <Sparkles className="h-3.5 w-3.5" />
-              My Expertise
+              Tecnologías
             </div>
             <h2 className="mt-5 text-4xl font-bold text-white sm:text-5xl lg:text-[56px]">
-              Skills &amp; Technologies
+              Skills &amp; Tecnologías
             </h2>
             <p className="mt-4 max-w-xl text-sm text-zinc-400 sm:text-base">
-              A comprehensive overview of my technical skills and proficiency levels
+              Tecnologías y herramientas que he utilizado durante mi formación, experiencia y proyectos personales.
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 lg:grid-cols-2">
           {skillGroups.map((group, idx) => (
             <SkillCard key={group.id} group={group} delayMs={idx * 100} />
           ))}
