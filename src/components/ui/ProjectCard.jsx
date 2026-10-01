@@ -40,22 +40,29 @@ export default function ProjectCard({ project }) {
         </div>
 
         <div className="absolute bottom-3 right-3 flex gap-2">
+        {project.demoUrl && (
           <a
-            href={project.demoUrl || "#"}
+            href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Ver demo de ${project.title}`}
             className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 bg-zinc-900/80 text-white backdrop-blur-sm transition-all duration-200 hover:border-accent hover:bg-accent hover:text-black"
           >
             <ExternalLink className="h-[15px] w-[15px]" />
           </a>
-          <a
-            href={project.githubUrl || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 bg-zinc-900/80 text-white backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/10"
-          >
-            <SiGithub className="h-[15px] w-[15px]" />
-          </a>
+        )}
+        
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ver código de ${project.title} en GitHub`}
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 bg-zinc-900/80 text-white backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/10"
+            >
+              <SiGithub className="h-[15px] w-[15px]" />
+            </a>
+          )}
         </div>
       </div>
 
