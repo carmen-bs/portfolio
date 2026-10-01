@@ -1,11 +1,10 @@
 import {
   Code2,
+  Database,
   GitBranch,
   LayoutTemplate,
-  Palette,
   Smartphone,
   Wrench,
-  Zap,
   ServerCog,
 } from "lucide-react";
 import { useState } from "react";
@@ -15,47 +14,47 @@ const largeServices = [
   {
     id: "frontend",
     icon: LayoutTemplate,
-    title: "Frontend Development",
+    title: "Desarrollo Frontend",
     description:
-      "Building responsive and performant web applications using React, Next.js, and modern JavaScript frameworks with pixel-perfect designs.",
+      "Desarrollo de interfaces web responsivas con React, JavaScript, HTML, CSS y Tailwind CSS, conectadas con APIs y servicios backend.",
   },
   {
     id: "backend",
     icon: ServerCog,
-    title: "Backend Development",
+    title: "Desarrollo Backend",
     description:
-      "Developing scalable server-side applications and REST APIs using Node.js, Express, and databases like MongoDB and PostgreSQL.",
+      "Desarrollo de APIs REST y lógica de servidor con Python y FastAPI, trabajando con bases de datos y servicios externos.",
   },
 ];
 
 const smallServices = [
   {
-    id: "uiux",
-    icon: Palette,
-    title: "UI/UX Design",
-    description:
-      "Designing intuitive and visually appealing user interfaces with a focus on usability, accessibility, and modern design principles.",
-  },
-  {
-    id: "components",
+    id: "fullstack",
     icon: Code2,
-    title: "Custom Components",
+    title: "Desarrollo Full Stack",
     description:
-      "Developing reusable, scalable component libraries and design systems that maintain consistency across your entire application.",
+      "Integración de frontend, backend, APIs y bases de datos para construir aplicaciones web completas y funcionales.",
   },
   {
-    id: "performance",
-    icon: Zap,
-    title: "Performance Optimization",
+    id: "mobile",
+    icon: Smartphone,
+    title: "Desarrollo Móvil",
     description:
-      "Optimizing web applications for speed and efficiency through code splitting, lazy loading, and best practices.",
+      "Desarrollo de aplicaciones Android con Java y Android Studio, aplicando los conocimientos adquiridos durante DAM.",
   },
   {
-    id: "consulting",
+    id: "databases",
+    icon: Database,
+    title: "Bases de Datos",
+    description:
+      "Trabajo con bases de datos relacionales y servicios como MySQL, Oracle y Supabase para almacenar y gestionar información.",
+  },
+  {
+    id: "versioncontrol",
     icon: GitBranch,
-    title: "Code Review & Consulting",
+    title: "Git & GitHub",
     description:
-      "Providing expert code reviews, architecture consulting, and technical guidance to improve your codebase quality.",
+      "Control de versiones con Git y GitHub, utilizando ramas, commits y pull requests para organizar el desarrollo de proyectos.",
   },
 ];
 
@@ -179,15 +178,15 @@ export default function ServicesSection() {
           <div className="flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               <Wrench className="h-3.5 w-3.5" />
-              What I Offer
+              Áreas de desarrollo
             </div>
             <h2 className="mt-5 text-4xl font-bold text-white sm:text-5xl lg:text-[56px] leading-tight">
-              Built for innovation. Designed for
+              Desarrollo de aplicaciones
               <br />
-              results.
+              de principio a fin.
             </h2>
             <p className="mt-4 max-w-xl text-sm text-zinc-400 sm:text-base">
-              Comprehensive solutions to transform your ideas into exceptional digital experiences.
+              Áreas en las que he trabajado durante mi formación y el desarrollo de proyectos, desde la interfaz hasta el backend y los datos.
             </p>
           </div>
         </ScrollReveal>
