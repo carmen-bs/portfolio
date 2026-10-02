@@ -1,14 +1,14 @@
 import { Code2, Heart, Mail, MapPin } from "lucide-react";
-import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 import { SiGithub } from "react-icons/si";
 import ScrollReveal from "../animations/ScrollReveal";
 
 const quickLinks = [
-  ["About", "about"],
-  ["Skills", "skills"],
-  ["Projects", "projects"],
-  ["Services", "services"],
-  ["Contact", "contact"],
+  ["Sobre mí", "about"],
+  ["Tecnologías", "skills"],
+  ["Proyectos", "projects"],
+  ["Áreas", "services"],
+  ["Contacto", "contact"],
 ];
 
 function scrollTo(id) {
@@ -25,24 +25,24 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2">
                 <Code2 className="h-7 w-7 text-white" strokeWidth={2.25} />
-                <span className="text-2xl font-bold tracking-tight bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(74,222,128,1)_50%)] bg-clip-text text-transparent">
-                  Krif
+                <span className="text-2xl font-bold tracking-tight bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(251,113,133,1)_50%)] bg-clip-text text-transparent">
+                  Carmen
                 </span>
               </div>
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-zinc-400">
-                Crafting seamless digital experiences with modern web technologies.
+                Desarrolladora junior especializada en desarrollo de aplicaciones y tecnologías web Full Stack.
               </p>
               <div className="mt-6 flex flex-col gap-3">
                 <a
-                  href="mailto:krif014@gmail.com"
+                  href="mailto:carmen027@gmail.com"
                   className="flex items-center gap-3 rounded-xl border border-white/10 bg-surface px-4 py-3 transition hover:border-accent/40 hover:shadow-glow"
                 >
                   <Mail className="h-5 w-5 text-accent" />
-                  <span className="text-sm text-white">krif014@gmail.com</span>
+                  <span className="text-sm text-white">carmen027@gmail.com</span>
                 </a>
                 <div className="flex items-center gap-3 rounded-xl border cursor-pointer hover:border-accent/40 hover:shadow-glow border-white/10 bg-surface px-4 py-3">
                   <MapPin className="h-5 w-5 text-accent" />
-                  <span className="text-sm text-white">Kigali, RW</span>
+                  <span className="text-sm text-white">España</span>
                 </div>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           <ScrollReveal delayMs={100} y={24}>
             <div>
-              <h3 className="text-sm font-semibold text-white">Quick Links</h3>
+              <h3 className="text-sm font-semibold text-white">Enlaces rápidos</h3>
               <ul className="mt-5 space-y-3  text-zinc-400 transition">
                 {quickLinks.map(([label, id]) => (
                   <li key={id}>
@@ -69,16 +69,14 @@ export default function Footer() {
 
           <ScrollReveal delayMs={200} y={24}>
             <div>
-              <h3 className="text-sm font-semibold text-white">Connect With Me</h3>
+              <h3 className="text-sm font-semibold text-white">Perfiles profesionales</h3>
               <p className="mt-4 text-sm leading-relaxed text-zinc-400">
-                Let&apos;s connect and create something amazing together.
+                  Puedes encontrarme en GitHub y LinkedIn para conocer más sobre mi trabajo y trayectoria profesional.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 {[
-                  { Icon: SiGithub, href: "#", label: "GitHub" },
-                  { Icon: FaLinkedin, href: "#", label: "LinkedIn" },
-                  { Icon: FaXTwitter, href: "#", label: "X" },
-                  { Icon: FaInstagram, href: "#", label: "Website" },
+                  { Icon: SiGithub, href: "https://github.com/carmen-bs", label: "GitHub" },
+                  { Icon: FaLinkedin, href: "https://www.linkedin.com/in/carmen-baeza-sirvent-9a82411b2/", label: "LinkedIn" },
                 ].map(({ Icon, href, label }) => (
                   <a
                     key={label}
@@ -92,7 +90,7 @@ export default function Footer() {
                       className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100"
                       style={{
                         background:
-                          "radial-gradient(circle at 30% 20%, rgba(74,222,128,0.18), transparent 55%)",
+                          "radial-gradient(circle at 30% 20%, rgba(190,18,60,0.18), transparent 55%)",
                       }}
                       aria-hidden
                     />
@@ -108,11 +106,11 @@ export default function Footer() {
         <ScrollReveal delayMs={300} y={16}>
           <div className="mt-12 border-t border-white/10 pt-8">
             <div className="flex flex-col items-center justify-between gap-4 text-xs text-zinc-500 sm:flex-row">
-              <p>© {new Date().getFullYear()} Krif. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Carmen. Todos los derechos reservados.</p>
               <p className="flex items-center gap-1.5">
-                Built with{" "}
+                Desarrollado con{" "}
                 <Heart className="inline h-3.5 w-3.5 animate-pulse fill-accent text-accent" />{" "}
-                using React &amp; Tailwind CSS
+                usando React &amp; Tailwind CSS
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { useState, useRef } from "react";
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 import { SiGithub } from "react-icons/si";
 import ScrollReveal from "../animations/ScrollReveal";
 import RadialGradientBackground from "../backgrounds/RadialGradientBackground";
@@ -12,9 +12,8 @@ const MESSAGE_MAX = 250;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const socials = [
-  { Icon: SiGithub, href: "#", label: "GitHub" },
-  { Icon: FaLinkedin, href: "#", label: "LinkedIn" },
-  { Icon: FaXTwitter, href: "#", label: "X" },
+  { Icon: SiGithub, href: "https://github.com/carmen-bs", label: "GitHub" },
+  { Icon: FaLinkedin, href: "https://www.linkedin.com/in/carmen-baeza-sirvent-9a82411b2/", label: "LinkedIn" },
 ];
 
 export default function ContactSection() {
@@ -42,11 +41,11 @@ export default function ContactSection() {
     const { name, email, message } = fields;
 
     if (!name.trim() || !email.trim() || !message.trim()) {
-      setError("Please fill in all fields.");
+      setError("Por favor, completa todos los campos.");
       return;
     }
     if (!EMAIL_RE.test(email)) {
-      setError("Please enter a valid email address.");
+      setError("Por favor, introduce una dirección de email válida.");
       return;
     }
 
@@ -66,13 +65,13 @@ export default function ContactSection() {
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-accent/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
             <MessageCircle className="h-3.5 w-3.5" />
-            Get in touch
+            Contacto
           </div>
           <h2 className="mt-5 text-3xl font-bold text-white sm:text-4xl">
-            Let&apos;s Work Together
+            ¿Hablamos?
           </h2>
           <p className="mt-3 text-sm text-zinc-400 sm:text-base">
-            Have a project in mind? Let&apos;s discuss how we can bring your ideas to life.
+            Si quieres contactar conmigo por una oportunidad profesional o conocer más sobre mi trabajo, puedes escribirme.
           </p>
         </ScrollReveal>
 
@@ -88,7 +87,7 @@ export default function ContactSection() {
               className="pointer-events-none absolute inset-0 z-0"
               style={{
                 background:
-                  "radial-gradient(ellipse at top right, rgba(74,222,128,0.18) 0%, rgba(74,222,128,0.06) 35%, transparent 70%)",
+                  "radial-gradient(ellipse at top right, rgba(190,18,60,0.18) 0%, rgba(190,18,60,0.06) 35%, transparent 70%)",
               }}
               aria-hidden
             />
@@ -102,7 +101,7 @@ export default function ContactSection() {
                       htmlFor="name"
                       className="text-xs font-medium uppercase tracking-wide text-zinc-500"
                     >
-                      Name
+                      Nombre
                     </label>
                     <span className="text-xs text-zinc-600">
                       {fields.name.length}/{NAME_MAX}
@@ -114,7 +113,7 @@ export default function ContactSection() {
                     value={fields.name}
                     onChange={handleChange}
                     maxLength={NAME_MAX}
-                    placeholder="Your name"
+                    placeholder="Tu nombre"
                     className="mt-2 w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none ring-accent/0 transition placeholder:text-zinc-600 focus:border-accent focus:ring-2 focus:ring-accent/30"
                   />
                 </div>
@@ -138,7 +137,7 @@ export default function ContactSection() {
                     value={fields.email}
                     onChange={handleChange}
                     maxLength={EMAIL_MAX}
-                    placeholder="your.email@example.com"
+                    placeholder="tu.email@ejemplo.com"
                     className="mt-2 w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-accent focus:ring-2 focus:ring-accent/30"
                   />
                 </div>
@@ -150,7 +149,7 @@ export default function ContactSection() {
                       htmlFor="message"
                       className="text-xs font-medium uppercase tracking-wide text-zinc-500"
                     >
-                      Message
+                      mensaje
                     </label>
                     <span className="text-xs text-zinc-600">
                       {fields.message.length}/{MESSAGE_MAX}
@@ -163,7 +162,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     maxLength={MESSAGE_MAX}
                     rows={5}
-                    placeholder="Tell me about your project..."
+                    placeholder="Cuéntame sobre tu proyecto..."
                     className="mt-2 w-full resize-none rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-accent focus:ring-2 focus:ring-accent/30"
                   />
                 </div>
@@ -174,13 +173,13 @@ export default function ContactSection() {
                 disabled={!isFormFilled}
                 className="group mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-muted via-emerald-70 to-accent px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-40"
               >
-                Send Message
+                Enviar mensaje
                 <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </button>
 
               {sent && (
                 <p className="mt-4 rounded-xl border border-accent/40 bg-accent/5 px-4 py-3 text-center text-sm text-accent">
-                  Message sent successfully! I&apos;ll get back to you soon.
+                  ¡Mensaje enviado con éxito! Te contactaré pronto.
                 </p>
               )}
               {error && !sent && (
@@ -193,10 +192,10 @@ export default function ContactSection() {
 
         
           <ScrollReveal delayMs={140}>
-            <h3 className="text-2xl font-bold text-white">Let&apos;s Connect</h3>
+            <h3 className="text-2xl font-bold text-white">Contactemos</h3>
             <p className="mt-4 text-sm leading-relaxed text-zinc-400">
-              I&apos;m always open to discussing new projects, creative ideas, or opportunities to
-              be part of your vision. Feel free to reach out!
+              Estoy abierta a nuevas oportunidades profesionales y a seguir creciendo como desarrolladora.
+              Si quieres conocer más sobre mi perfil o mi trabajo, no dudes en contactar conmigo.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -206,7 +205,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs text-zinc-500">Email</p>
-                  <p className="text-sm font-medium text-white">krif014@gmail.com</p>
+                  <p className="text-sm font-medium text-white">carmenbs027@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-surface/80 px-4 py-4 hover:border-accent/50 transition cursor-pointer">
@@ -214,14 +213,14 @@ export default function ContactSection() {
                   <MapPin className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-zinc-500">Location</p>
-                  <p className="text-sm font-medium text-white">Kigali, RW</p>
+                  <p className="text-xs text-zinc-500">Ubicación</p>
+                  <p className="text-sm font-medium text-white">España</p>
                 </div>
               </div>
             </div>
 
             <p className="mt-10 text-xs font-medium uppercase tracking-wide text-zinc-500">
-              Connect with me
+              Contactame
             </p>
             <div className="mt-3 flex gap-3">
               {socials.map(({ Icon, href, label }) => (

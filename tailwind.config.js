@@ -19,9 +19,9 @@ export default {
       
       colors: {
         accent: {
-          DEFAULT: "#4ade80",
-          muted: "#22c55e",
-          glow: "rgba(74, 222, 128, 0.25)",
+          DEFAULT: "#be123c",
+          muted: "#9f1239",
+          glow: "rgba(190, 18, 60, 0.25)",
         },
         surface: {
           DEFAULT: "#121212",
@@ -32,8 +32,8 @@ export default {
         quicksand: ['Urbanist', 'sans-serif'],
       },
       boxShadow: {
-        glow: "0 0 40px rgba(74, 222, 128, 0.12)",
-        "glow-strong": "0 0 48px rgba(74, 222, 128, 0.22)",
+        glow: "0 0 40px rgba(190, 18, 60, 0.12)",
+        "glow-strong": "0 0 48px rgba(190, 18, 60, 0.22)",
       },
     },
   },

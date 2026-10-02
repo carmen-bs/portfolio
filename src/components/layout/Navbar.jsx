@@ -2,11 +2,11 @@ import { useEffect, useMemo, useState } from "react";
 import { Code2, Menu, X } from "lucide-react";
 
 const LINKS = [
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
-  { id: "services", label: "Services" },
-  { id: "contact", label: "Contact" },
+  { id: "about", label: "Sobre mí" },
+  { id: "skills", label: "Tecnologías" },
+  { id: "projects", label: "Proyectos" },
+  { id: "services", label: "Áreas" },
+  { id: "contact", label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -72,10 +72,10 @@ export default function Navbar() {
           <Code2 className="h-8 w-8 text-white" />
           <span
             className="text-[29px] font-bold tracking-tight
-              bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(74,222,128,1)_50%)]
+              bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(251,113,113,1)_50%)]
               bg-clip-text text-transparent"
           >
-            Krif
+            Carmen
           </span>
         </button>
 
@@ -105,12 +105,12 @@ export default function Navbar() {
             onClick={() => scrollTo("contact")}
             className="hidden rounded-[12px] bg-white px-5 py-2.5 text-sm font-semibold text-black shadow-glow transition duration-100 ease-in-out hover:bg-accent md:inline-flex"
           >
-            Hire Me
+            Contactar
           </button>
           <button
             type="button"
             className="inline-flex rounded-lg p-2 text-zinc-300 md:hidden"
-            aria-label="Toggle menu"
+            aria-label="Abrir o cerrar menú"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -151,7 +151,7 @@ export default function Navbar() {
               onClick={() => scrollTo("contact")}
               className="mt-4 w-full rounded-[12px] bg-white py-3 text-sm font-semibold text-black transition hover:bg-accent"
             >
-              Hire Me
+              Contactar
             </button>
           </div>
         </div>

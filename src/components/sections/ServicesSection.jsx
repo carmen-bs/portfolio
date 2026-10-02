@@ -1,11 +1,10 @@
 import {
   Code2,
+  Database,
   GitBranch,
   LayoutTemplate,
-  Palette,
   Smartphone,
   Wrench,
-  Zap,
   ServerCog,
 } from "lucide-react";
 import { useState } from "react";
@@ -15,54 +14,54 @@ const largeServices = [
   {
     id: "frontend",
     icon: LayoutTemplate,
-    title: "Frontend Development",
+    title: "Desarrollo Frontend",
     description:
-      "Building responsive and performant web applications using React, Next.js, and modern JavaScript frameworks with pixel-perfect designs.",
+      "Desarrollo de interfaces web responsivas con React, JavaScript, HTML, CSS y Tailwind CSS, conectadas con APIs y servicios backend.",
   },
   {
     id: "backend",
     icon: ServerCog,
-    title: "Backend Development",
+    title: "Desarrollo Backend",
     description:
-      "Developing scalable server-side applications and REST APIs using Node.js, Express, and databases like MongoDB and PostgreSQL.",
+      "Desarrollo de APIs REST y lógica de servidor con Python y FastAPI, trabajando con bases de datos y servicios externos.",
   },
 ];
 
 const smallServices = [
   {
-    id: "uiux",
-    icon: Palette,
-    title: "UI/UX Design",
-    description:
-      "Designing intuitive and visually appealing user interfaces with a focus on usability, accessibility, and modern design principles.",
-  },
-  {
-    id: "components",
+    id: "fullstack",
     icon: Code2,
-    title: "Custom Components",
+    title: "Desarrollo Full Stack",
     description:
-      "Developing reusable, scalable component libraries and design systems that maintain consistency across your entire application.",
+      "Integración de frontend, backend, APIs y bases de datos para construir aplicaciones web completas y funcionales.",
   },
   {
-    id: "performance",
-    icon: Zap,
-    title: "Performance Optimization",
+    id: "mobile",
+    icon: Smartphone,
+    title: "Desarrollo Móvil",
     description:
-      "Optimizing web applications for speed and efficiency through code splitting, lazy loading, and best practices.",
+      "Desarrollo de aplicaciones Android con Java y Android Studio, aplicando los conocimientos adquiridos durante DAM.",
   },
   {
-    id: "consulting",
+    id: "databases",
+    icon: Database,
+    title: "Bases de Datos",
+    description:
+      "Trabajo con bases de datos relacionales y servicios como MySQL, Oracle y Supabase para almacenar y gestionar información.",
+  },
+  {
+    id: "versioncontrol",
     icon: GitBranch,
-    title: "Code Review & Consulting",
+    title: "Git & GitHub",
     description:
-      "Providing expert code reviews, architecture consulting, and technical guidance to improve your codebase quality.",
+      "Control de versiones con Git y GitHub, utilizando ramas, commits y pull requests para organizar el desarrollo de proyectos.",
   },
 ];
 
 const cardGridStyle = {
   backgroundImage: `
-    linear-gradient(rgba(74,222,128,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74,222,128,0.06) 1px, transparent 1px)
+    linear-gradient(rgba(190,18,60,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190,18,60,0.06) 1px, transparent 1px)
   `,
   backgroundSize: "32px 32px",
 };
@@ -75,9 +74,9 @@ function LargeCard({ service }) {
     <div
       className="relative overflow-hidden rounded-2xl p-8 transition-all duration-300 cursor-pointer"
       style={{
-        background: "rgba(15, 20, 15, 0.9)",
-        border: hovered ? "1px solid rgba(74,222,128,0.5)" : "1px solid rgba(255,255,255,0.08)",
-        boxShadow: hovered ? "0 0 30px rgba(74,222,128,0.12)" : "none",
+        background: "rgba(20, 15, 17, 0.9)",
+        border: hovered ? "1px solid rgba(190,18,60,0.5)" : "1px solid rgba(255,255,255,0.08)",
+        boxShadow: hovered ? "0 0 30px rgba(190,18,60,0.12)" : "none",
         ...cardGridStyle,
       }}
       onMouseEnter={() => setHovered(true)}
@@ -87,8 +86,8 @@ function LargeCard({ service }) {
       <div
         className="flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300"
         style={{
-          background: hovered ? "rgba(74,222,128,0.25)" : "rgba(74,222,128,0.15)",
-          border: "1px solid rgba(74,222,128,0.3)",
+          background: hovered ? "rgba(190,18,60,0.25)" : "rgba(190,18,60,0.15)",
+          border: "1px solid rgba(190,18,60,0.3)",
         }}
       >
         <Icon className="h-8 w-8 text-accent" />
@@ -97,7 +96,7 @@ function LargeCard({ service }) {
     
       <h3
         className="mt-6 text-2xl font-bold transition-colors duration-200"
-        style={{ color: hovered ? "#4ade80" : "#ffffff" }}
+        style={{ color: hovered ? "#be123c" : "#ffffff" }}
       >
         {service.title}
       </h3>
@@ -118,9 +117,9 @@ function SmallCard({ service }) {
     <div
       className="relative overflow-hidden rounded-2xl p-6 transition-all duration-300 cursor-pointer"
       style={{
-        background: "rgba(15, 20, 15, 0.9)",
-        border: hovered ? "1px solid rgba(74,222,128,0.5)" : "1px solid rgba(255,255,255,0.08)",
-        boxShadow: hovered ? "0 0 24px rgba(74,222,128,0.1)" : "none",
+        background: "rgba(20, 15, 17, 0.9)",
+        border: hovered ? "1px solid rgba(190,18,60,0.5)" : "1px solid rgba(255,255,255,0.08)",
+        boxShadow: hovered ? "0 0 24px rgba(190,18,60,0.1)" : "none",
         ...cardGridStyle,
       }}
       onMouseEnter={() => setHovered(true)}
@@ -130,8 +129,8 @@ function SmallCard({ service }) {
       <div
         className="flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300"
         style={{
-          background: hovered ? "rgba(74,222,128,0.25)" : "rgba(74,222,128,0.15)",
-          border: "1px solid rgba(74,222,128,0.3)",
+          background: hovered ? "rgba(190,18,60,0.25)" : "rgba(190,18,60,0.15)",
+          border: "1px solid rgba(190,18,60,0.3)",
         }}
       >
         <Icon className="h-6 w-6 text-accent" />
@@ -140,7 +139,7 @@ function SmallCard({ service }) {
       {/* Title */}
       <h3
         className="mt-5 text-lg font-bold transition-colors duration-200"
-        style={{ color: hovered ? "#4ade80" : "#ffffff" }}
+        style={{ color: hovered ? "#be123c" : "#ffffff" }}
       >
         {service.title}
       </h3>
@@ -179,15 +178,15 @@ export default function ServicesSection() {
           <div className="flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               <Wrench className="h-3.5 w-3.5" />
-              What I Offer
+              Áreas de desarrollo
             </div>
             <h2 className="mt-5 text-4xl font-bold text-white sm:text-5xl lg:text-[56px] leading-tight">
-              Built for innovation. Designed for
+              Desarrollo de aplicaciones
               <br />
-              results.
+              de principio a fin.
             </h2>
             <p className="mt-4 max-w-xl text-sm text-zinc-400 sm:text-base">
-              Comprehensive solutions to transform your ideas into exceptional digital experiences.
+              Áreas en las que he trabajado durante mi formación y el desarrollo de proyectos, desde la interfaz hasta el backend y los datos.
             </p>
           </div>
         </ScrollReveal>

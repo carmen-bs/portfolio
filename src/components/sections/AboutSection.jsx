@@ -45,12 +45,20 @@ function useCountUp(target, duration = 1800, startCounting = false) {
 }
 
 function StatNumber({ value, delayMs = 0, inView }) {
+    const isNumeric = /^\d/.test(value);
+
+    if (!isNumeric) {
+        return <span>{value}</span>;
+    }
+
     const [started, setStarted] = useState(false);
+
     const match = value.match(/^([\d.]+)(.*)$/);
     const target = match ? parseFloat(match[1]) : 0;
     const suffix = match ? match[2] : "";
     const isDecimal = target % 1 !== 0;
     const intTarget = isDecimal ? Math.round(target * 10) : target;
+
     const rawCount = useCountUp(intTarget, 1800, started);
     const display = isDecimal ? (rawCount / 10).toFixed(1) : rawCount;
 
@@ -59,6 +67,7 @@ function StatNumber({ value, delayMs = 0, inView }) {
             setStarted(false);
             return;
         }
+
         const timer = setTimeout(() => setStarted(true), delayMs);
         return () => clearTimeout(timer);
     }, [inView, delayMs]);
@@ -70,9 +79,9 @@ function FeatureCard({ icon: Icon, title, description, className = "" }) {
     return (
         <div
             className={`group relative rounded-2xl bg-zinc-900/60 p-6 transition-all duration-300 hover:bg-zinc-900/80 ${className}`}
-            style={{ border: "1px solid rgba(74,222,128,0.15)" }}
-            onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.6)"}
-            onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.15)"}
+            style={{ border: "1px solid rgba(190,18,60,0.15)" }}
+            onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.6)"}
+            onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.15)"}
         >
             <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent transition-colors duration-300 group-hover:bg-accent/25">
                 <Icon className="h-5 w-5" />
@@ -88,34 +97,36 @@ export default function AboutSection() {
     const inView = useInView(sectionRef);
 
     const stats = [
-        { value: "45+", label: "Happy Clients", delayMs: 0 },
-        { value: "2.5K+", label: "Code Commits", delayMs: 150 },
-        { value: "500+", label: "GitHub Stars", delayMs: 300 },
+        { value: "DAM", label: "Formación", delayMs: 0 },
+        { value: "Full Stack", label: "Perfil", delayMs: 150 },
+        { value: "5+", label: "Tecnologías principales", delayMs: 300 },
     ];
 
     const cards = [
         {
             icon: Code2,
-            title: "Expertise",
+            title: "Desarrollo Full Stack",
             description:
-                "Specialized in building scalable web applications with modern technologies and best practices.",
+                "Desarrollo frontend y backend para aplicaciones web.",
         },
         {
             icon: Sparkles,
-            title: "Clean Code",
-            description: "Writing maintainable, well-documented code that scales.",
+            title: "Código Limpio",
+            description:
+                "Código organizado, mantenible y fácil de entender.",
         },
         {
             icon: Download,
-            title: "Performance",
-            description: "Optimizing for speed and efficiency in every project.",
+            title: "Aprendizaje Continuo",
+            description:
+                "Interés por seguir aprendiendo nuevas tecnologías.",
         },
     ];
 
     const highlights = [
-        { value: "100%", label: "Client Satisfaction" },
-        { value: "24/7", label: "Support Available" },
-        { value: "Fast", label: "Delivery Time" },
+        { value: "Python", label: "Backend" },
+        { value: "React", label: "Frontend" },
+        { value: "Git", label: "Control de versiones" },
     ];
 
     return (
@@ -133,7 +144,7 @@ export default function AboutSection() {
                         right: -280,
                         bottom: -280,
                         borderRadius: "50%",
-                        border: "110px solid rgba(20, 60, 20, 0.55)",
+                        border: "110px solid rgba(74, 16, 36, 0.55)",
                         background: "transparent",
                         opacity: 0.5,
                     }}
@@ -148,37 +159,35 @@ export default function AboutSection() {
                         <ScrollReveal delayMs={0}>
                             <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/20 h-[40px] px-5 py-2 text-sm font-medium text-white">
                                 <Code2 className="h-4 w-4 shrink-0 text-accent" />
-                                <span>Full-Stack Developer</span>
+                                <span>Desarrolladora Junior · DAM</span>
                                 <Sparkles className="h-4 w-4 shrink-0 text-accent" />
                             </div>
                         </ScrollReveal>
 
                         <ScrollReveal delayMs={80}>
                             <h2 className="text-[42px] mt-[20px] font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-[52px]">
-                                Crafting Digital
+                                Desarrollo soluciones
                                 <br />
-                                Experiences That Matter
+                                que convierten ideas en proyectos
                             </h2>
                         </ScrollReveal>
 
                         <ScrollReveal delayMs={160}>
                             <div className="mt-11 space-y-4 text-[15px] leading-relaxed text-zinc-400">
                                 <p>
-                                    I'm a passionate React developer with over 3 years of
-                                    experience building scalable, performant web applications.
-                                    I specialize in creating intuitive user interfaces that
-                                    combine beautiful design with exceptional functionality.
+                                    Soy desarrolladora junior y recién graduada en Desarrollo de
+                                    Aplicaciones Multiplataforma. Me interesa especialmente el desarrollo
+                                    web Full Stack y la creación de aplicaciones útiles y funcionales.
                                 </p>
                                 <p>
-                                    My expertise spans the entire frontend ecosystem, from React
-                                    and Next.js to TypeScript and modern CSS frameworks. I'm
-                                    committed to writing clean, maintainable code and staying
-                                    current with the latest web technologies.
+                                    He trabajado con tecnologías como Python, JavaScript, React, FastAPI,
+                                    APIs, Supabase y bases de datos, además de herramientas de despliegue
+                                    y servicios en la nube.
                                 </p>
                                 <p>
-                                    When I'm not coding, you'll find me contributing to
-                                    open-source projects, writing technical articles, or
-                                    exploring new design trends.
+                                    Me gusta trabajar con código organizado, aprender nuevas tecnologías
+                                    y seguir mejorando mis proyectos mediante buenas prácticas y control
+                                    de versiones con Git y GitHub.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -198,7 +207,7 @@ export default function AboutSection() {
                                                     top: "70%",
                                                     transform: "translateY(-50%)",
                                                     background:
-                                                        "linear-gradient(to bottom, transparent, #4ade80, #16a34a40, transparent)",
+                                                        "linear-gradient(to bottom, transparent, #be123c, #9f123940, transparent)",
                                                 }}
                                             />
                                         )}
@@ -214,12 +223,12 @@ export default function AboutSection() {
                         <ScrollReveal delayMs={320}>
                             <div className="mt-9">
                                 <a
-                                    href="/resume.pdf"
+                                    href="Cv Carmen prog 2026.pdf"
                                     download
                                     className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-200 hover:bg-zinc-100"
                                 >
                                     <Download className="h-4 w-4" />
-                                    Download Resume
+                                    Descargar CV
                                 </a>
                             </div>
                         </ScrollReveal>
@@ -258,9 +267,9 @@ export default function AboutSection() {
                         <ScrollReveal delayMs={260}>
                             <div
                                 className="flex items-center justify-around rounded-2xl bg-zinc-900/60 px-6 py-5 transition-all duration-300 hover:bg-zinc-900/80"
-                                style={{ border: "1px solid rgba(74,222,128,0.15)" }}
-                                onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.6)"}
-                                onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.15)"}
+                                style={{ border: "1px solid rgba(190,18,60,0.15)" }}
+                                onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.6)"}
+                                onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.15)"}
                             >
                                 {highlights.map((h, i) => (
                                     <div key={i} className="text-center">
