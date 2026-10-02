@@ -32,7 +32,7 @@ export default function TechStack() {
           right: -280,
           top: -280,
           borderRadius: "50%",
-          border: "110px solid rgba(20, 60, 20, 0.01)",
+          border: "110px solid rgba(74, 16, 36, 0.01)",
           background: "transparent",
           opacity: 0.5,
         }}

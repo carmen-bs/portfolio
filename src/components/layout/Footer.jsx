@@ -25,7 +25,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2">
                 <Code2 className="h-7 w-7 text-white" strokeWidth={2.25} />
-                <span className="text-2xl font-bold tracking-tight bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(74,222,128,1)_50%)] bg-clip-text text-transparent">
+                <span className="text-2xl font-bold tracking-tight bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(251,113,133,1)_50%)] bg-clip-text text-transparent">
                   Carmen
                 </span>
               </div>
@@ -90,7 +90,7 @@ export default function Footer() {
                       className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100"
                       style={{
                         background:
-                          "radial-gradient(circle at 30% 20%, rgba(74,222,128,0.18), transparent 55%)",
+                          "radial-gradient(circle at 30% 20%, rgba(190,18,60,0.18), transparent 55%)",
                       }}
                       aria-hidden
                     />

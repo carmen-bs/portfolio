@@ -133,10 +133,10 @@ export default function ProjectsSection() {
                   onClick={() => setFilter(id)}
                   className="relative inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"
                   style={{
-                    background: active ? "rgba(20, 55, 20, 0.95)" : "rgba(255,255,255,0.06)",
+                    background: active ? "rgba(74, 16, 36, 0.95)" : "rgba(255,255,255,0.06)",
                     color: active ? "#ffffff" : "#a1a1aa",
-                    border: active ? "1px solid rgba(74,222,128,0.4)" : "1px solid rgba(255,255,255,0.1)",
-                    boxShadow: active ? "0 0 32px 10px rgba(74,222,128,0.3)" : "none",
+                    border: active ? "1px solid rgba(190,18,60,0.4)" : "1px solid rgba(255,255,255,0.1)",
+                    boxShadow: active ? "0 0 32px 10px rgba(190,18,60,0.3)" : "none",
                     fontWeight: active ? "600" : "500",
                   }}
                 >
@@ -205,9 +205,9 @@ export default function ProjectsSection() {
                 style={{
                   width: i === page ? 32 : 8,
                   height: 8,
-                  background: i === page ? "#4ade80" : "#3f3f46",
+                  background: i === page ? "#be123c" : "#3f3f46",
                 }}
-                aria-label={`Go to slide ${i + 1}`}
+                aria-label={`Ir a la diapositiva ${i + 1}`}
               />
             ))}
           </div>

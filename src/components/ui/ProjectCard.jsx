@@ -72,7 +72,7 @@ export default function ProjectCard({ project }) {
      
         <h3
           className="text-xl font-bold leading-snug transition-colors duration-200"
-          style={{ color: hovered ? "#4ade80" : "#ffffff" }}
+          style={{ color: hovered ? "#be123c" : "#ffffff" }}
         >
           {project.title}
         </h3>

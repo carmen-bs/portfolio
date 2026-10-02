@@ -60,8 +60,8 @@ const smallServices = [
 
 const cardGridStyle = {
   backgroundImage: `
-    linear-gradient(rgba(74,222,128,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74,222,128,0.06) 1px, transparent 1px)
+    linear-gradient(rgba(190,18,60,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190,18,60,0.06) 1px, transparent 1px)
   `,
   backgroundSize: "32px 32px",
 };
@@ -74,9 +74,9 @@ function LargeCard({ service }) {
     <div
       className="relative overflow-hidden rounded-2xl p-8 transition-all duration-300 cursor-pointer"
       style={{
-        background: "rgba(15, 20, 15, 0.9)",
-        border: hovered ? "1px solid rgba(74,222,128,0.5)" : "1px solid rgba(255,255,255,0.08)",
-        boxShadow: hovered ? "0 0 30px rgba(74,222,128,0.12)" : "none",
+        background: "rgba(20, 15, 17, 0.9)",
+        border: hovered ? "1px solid rgba(190,18,60,0.5)" : "1px solid rgba(255,255,255,0.08)",
+        boxShadow: hovered ? "0 0 30px rgba(190,18,60,0.12)" : "none",
         ...cardGridStyle,
       }}
       onMouseEnter={() => setHovered(true)}
@@ -86,8 +86,8 @@ function LargeCard({ service }) {
       <div
         className="flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300"
         style={{
-          background: hovered ? "rgba(74,222,128,0.25)" : "rgba(74,222,128,0.15)",
-          border: "1px solid rgba(74,222,128,0.3)",
+          background: hovered ? "rgba(190,18,60,0.25)" : "rgba(190,18,60,0.15)",
+          border: "1px solid rgba(190,18,60,0.3)",
         }}
       >
         <Icon className="h-8 w-8 text-accent" />
@@ -96,7 +96,7 @@ function LargeCard({ service }) {
     
       <h3
         className="mt-6 text-2xl font-bold transition-colors duration-200"
-        style={{ color: hovered ? "#4ade80" : "#ffffff" }}
+        style={{ color: hovered ? "#be123c" : "#ffffff" }}
       >
         {service.title}
       </h3>
@@ -117,9 +117,9 @@ function SmallCard({ service }) {
     <div
       className="relative overflow-hidden rounded-2xl p-6 transition-all duration-300 cursor-pointer"
       style={{
-        background: "rgba(15, 20, 15, 0.9)",
-        border: hovered ? "1px solid rgba(74,222,128,0.5)" : "1px solid rgba(255,255,255,0.08)",
-        boxShadow: hovered ? "0 0 24px rgba(74,222,128,0.1)" : "none",
+        background: "rgba(20, 15, 17, 0.9)",
+        border: hovered ? "1px solid rgba(190,18,60,0.5)" : "1px solid rgba(255,255,255,0.08)",
+        boxShadow: hovered ? "0 0 24px rgba(190,18,60,0.1)" : "none",
         ...cardGridStyle,
       }}
       onMouseEnter={() => setHovered(true)}
@@ -129,8 +129,8 @@ function SmallCard({ service }) {
       <div
         className="flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300"
         style={{
-          background: hovered ? "rgba(74,222,128,0.25)" : "rgba(74,222,128,0.15)",
-          border: "1px solid rgba(74,222,128,0.3)",
+          background: hovered ? "rgba(190,18,60,0.25)" : "rgba(190,18,60,0.15)",
+          border: "1px solid rgba(190,18,60,0.3)",
         }}
       >
         <Icon className="h-6 w-6 text-accent" />
@@ -139,7 +139,7 @@ function SmallCard({ service }) {
       {/* Title */}
       <h3
         className="mt-5 text-lg font-bold transition-colors duration-200"
-        style={{ color: hovered ? "#4ade80" : "#ffffff" }}
+        style={{ color: hovered ? "#be123c" : "#ffffff" }}
       >
         {service.title}
       </h3>

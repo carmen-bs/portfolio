@@ -79,9 +79,9 @@ function FeatureCard({ icon: Icon, title, description, className = "" }) {
     return (
         <div
             className={`group relative rounded-2xl bg-zinc-900/60 p-6 transition-all duration-300 hover:bg-zinc-900/80 ${className}`}
-            style={{ border: "1px solid rgba(74,222,128,0.15)" }}
-            onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.6)"}
-            onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.15)"}
+            style={{ border: "1px solid rgba(190,18,60,0.15)" }}
+            onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.6)"}
+            onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.15)"}
         >
             <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent transition-colors duration-300 group-hover:bg-accent/25">
                 <Icon className="h-5 w-5" />
@@ -144,7 +144,7 @@ export default function AboutSection() {
                         right: -280,
                         bottom: -280,
                         borderRadius: "50%",
-                        border: "110px solid rgba(20, 60, 20, 0.55)",
+                        border: "110px solid rgba(74, 16, 36, 0.55)",
                         background: "transparent",
                         opacity: 0.5,
                     }}
@@ -207,7 +207,7 @@ export default function AboutSection() {
                                                     top: "70%",
                                                     transform: "translateY(-50%)",
                                                     background:
-                                                        "linear-gradient(to bottom, transparent, #4ade80, #16a34a40, transparent)",
+                                                        "linear-gradient(to bottom, transparent, #be123c, #9f123940, transparent)",
                                                 }}
                                             />
                                         )}
@@ -267,9 +267,9 @@ export default function AboutSection() {
                         <ScrollReveal delayMs={260}>
                             <div
                                 className="flex items-center justify-around rounded-2xl bg-zinc-900/60 px-6 py-5 transition-all duration-300 hover:bg-zinc-900/80"
-                                style={{ border: "1px solid rgba(74,222,128,0.15)" }}
-                                onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.6)"}
-                                onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(74,222,128,0.15)"}
+                                style={{ border: "1px solid rgba(190,18,60,0.15)" }}
+                                onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.6)"}
+                                onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(190,18,60,0.15)"}
                             >
                                 {highlights.map((h, i) => (
                                     <div key={i} className="text-center">

@@ -87,7 +87,7 @@ export default function ContactSection() {
               className="pointer-events-none absolute inset-0 z-0"
               style={{
                 background:
-                  "radial-gradient(ellipse at top right, rgba(74,222,128,0.18) 0%, rgba(74,222,128,0.06) 35%, transparent 70%)",
+                  "radial-gradient(ellipse at top right, rgba(190,18,60,0.18) 0%, rgba(190,18,60,0.06) 35%, transparent 70%)",
               }}
               aria-hidden
             />

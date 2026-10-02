@@ -70,7 +70,7 @@ export default function Hero() {
         className="pointer-events-none absolute -left-20 -top-20 h-[520px] w-[440px] opacity-90"
         style={{
           background:
-            "radial-gradient(ellipse at 60% 40%, #1a4d1a 0%, #0d2e0d 60%, transparent 100%)",
+            "radial-gradient(ellipse at 60% 40%, #4a1024 0%, #260812 60%, transparent 100%)",
           borderRadius: "60% 40% 70% 30% / 50% 60% 40% 50%",
         }}
       />
@@ -79,7 +79,7 @@ export default function Hero() {
       <div
         className="pointer-events-none absolute -left-48 -top-64 h-[960px] w-[960px] rounded-full opacity-55"
         style={{
-          border: "120px solid rgba(20, 60, 20, 0.55)",
+          border: "120px solid rgba(74, 16, 36, 0.55)",
           background: "transparent",
         }}
       />
@@ -139,7 +139,7 @@ export default function Hero() {
                           top: "70%",
                           transform: "translateY(-50%)",
                           background:
-                            "linear-gradient(to bottom, transparent, #4ade80, #16a34a40, transparent)",
+                            "linear-gradient(to bottom, transparent, #be123c, #9f123940, transparent)",
                         }}
                       />
                     )}
@@ -168,14 +168,14 @@ export default function Hero() {
                       background: `conic-gradient(
                         transparent 0deg,
                         transparent 158deg,
-                        #4ade80 168deg,
-                        #22c55e 175deg,
-                        #4ade80 182deg,
+                        #be123c 168deg,
+                        #9f1239 175deg,
+                        #be123c 182deg,
                         transparent 192deg,
                         transparent 338deg,
-                        #4ade80 348deg,
-                        #22c55e 355deg,
-                        #4ade80 362deg,
+                        #be123c 348deg,
+                        #9f1239 355deg,
+                        #be123c 362deg,
                         transparent 372deg
                       )`,
                     }}
@@ -190,12 +190,12 @@ export default function Hero() {
                   className="absolute inset-[3px] w-[calc(100%-6px)] h-[calc(100%-6px)] object-cover rounded-[15px] z-10"
                 />
 
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-5 rounded-full border border-white/10 bg-transparent px-4 py-2.5 text-green-400 backdrop-blur whitespace-nowrap">
-                  <SiReact className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiPython className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiJavascript className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiFastapi className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
-                  <SiSupabase className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#00FF88] hover:drop-shadow-[0_0_10px_rgba(0,255,136,0.9)] hover:brightness-125" />
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-5 rounded-full border border-white/10 bg-transparent px-4 py-2.5 text-accent backdrop-blur whitespace-nowrap">
+                  <SiReact className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#fb7185] hover:drop-shadow-[0_0_10px_rgba(190,18,60,0.9)] hover:brightness-125" />
+                  <SiPython className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#fb7185] hover:drop-shadow-[0_0_10px_rgba(190,18,60,0.9)] hover:brightness-125" />
+                  <SiJavascript className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#fb7185] hover:drop-shadow-[0_0_10px_rgba(190,18,60,0.9)] hover:brightness-125" />
+                  <SiFastapi className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#fb7185] hover:drop-shadow-[0_0_10px_rgba(190,18,60,0.9)] hover:brightness-125" />
+                  <SiSupabase className="h-6 w-6 transition-transform duration-200 ease-in-out cursor-pointer hover:scale-125 hover:text-[#fb7185] hover:drop-shadow-[0_0_10px_rgba(190,18,60,0.9)] hover:brightness-125" />
                 </div>
               </div>
             </div>
