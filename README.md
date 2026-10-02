@@ -1,167 +1,120 @@
-# 🌿 Modern Developer Portfolio Template
+# 💻 Portfolio de Carmen
 
-<div align="center">
+Portfolio personal desarrollado para presentar mi perfil como **Desarrolladora Junior**, mis proyectos y las tecnologías con las que he trabajado durante mi formación y desarrollo de proyectos personales.
 
-<img src="public/hero.png" alt="Krif Portfolio Preview" width="100%" />
-
-<br />
-<br />
-
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![MIT License](https://img.shields.io/badge/License-MIT-4ade80?style=for-the-badge)](LICENSE)
-
-### Modern • Responsive • Animated • Performance Focused
-
-A sleek, responsive, and customizable developer portfolio template built with React, Vite, and Tailwind CSS. It includes ready-made sections for hero, about, skills, projects, services, testimonials, and contact — so developers can quickly replace the content with their own data and launch a professional portfolio.
-
-<br />
-
-## 🔗 Live Website
-### 👉 https://devportifolio-eta.vercel.app/
-
-<br />
-
-
-[Live Demo](https://devportifolio-eta.vercel.app/) • [Report Bug](../../issues) • [Request Feature](../../issues)
-
-</div>
-
-## 👥 Who Is This For?
-
-This template is made for developers, students, freelancers, and creatives who want a clean portfolio website without starting from zero. You can clone it, replace the content with your own information, add your projects, and deploy it easily.
+El portfolio está desarrollado con **React, Vite y Tailwind CSS**, con un diseño responsive, animaciones y diferentes secciones para mostrar mi experiencia, stack tecnológico y proyectos.
 
 ---
 
-# ✨ Features
+## 👩‍💻 Sobre mí
 
-- 🎬 Smooth scroll reveal animations
-- 📈 Animated statistics counters
-- 🎠 Interactive project carousel
-- 🧠 Categorised skills with progress indicators
-- 🧩 Bento-grid services section
-- 💬 Auto-rotating testimonials slider
-- 📩 Fully validated contact form
-- 📱 Fully responsive mobile-first design
-- 🌙 Modern dark UI with green accent system
-- ⚡ Optimised performance with Vite
+Soy recién graduada en **Desarrollo de Aplicaciones Multiplataforma (DAM)** y estoy orientando mi perfil profesional hacia el desarrollo de software y el desarrollo web Full Stack.
+
+He trabajado con tecnologías como **Python, JavaScript, React, FastAPI, Java, Supabase y bases de datos**, además de herramientas de control de versiones, servicios cloud y desarrollo de APIs.
+
+Actualmente continúo desarrollando proyectos personales para ampliar mis conocimientos y experiencia práctica.
 
 ---
 
-# 🖼️ Portfolio Preview
+## 🚀 Proyectos destacados
 
-## 🏠 Hero Section
+### 🗺️ Movilidad Urbana
 
-<img src="public/hero.png" alt="Hero Section Preview" width="100%" />
+Aplicación web Full Stack para generar itinerarios urbanos personalizados y visualizar datos de aforo por zonas.
 
----
+El proyecto integra:
 
-## 👨‍💻 About Section
+- Generación de itinerarios.
+- Mapas interactivos.
+- Rutas y diferentes modos de transporte.
+- Gestión de horarios.
+- Visualización de datos de aforo.
+- Autenticación de usuarios.
+- Persistencia de datos.
 
-<img src="public/about.png" alt="About Section Preview" width="100%" />
+**Tecnologías principales:**
 
----
+`React` · `FastAPI` · `Python` · `Supabase` · `Firebase`
 
-## 📊 Skills Section
+**Demo:**  
+https://movilidad-urbana-front.vercel.app/
 
-<img src="public/skills.png" alt="Skills Section Preview" width="100%" />
-
----
-
-## 🚀 Projects Section
-
-<img src="public/projects.png" alt="Projects Section Preview" width="100%" />
-
----
-
-## 🧩 Services Section
-
-<img src="public/services.png" alt="Services Section Preview" width="100%" />
+**Código:**  
+https://github.com/carmen-bs/movilidad-urbana-front
 
 ---
 
-## 💬 Testimonials Section
+### 🍽️ Yumplace
 
-<img src="public/testimonial.png" alt="Testimonials Preview" width="100%" />
+Aplicación Android desarrollada como proyecto final de DAM.
+
+Yumplace es una red social centrada en recetas donde los usuarios pueden publicar fotografías asociadas a recetas y compartirlas con sus seguidores.
+
+**Tecnologías principales:**
+
+`Java` · `Android Studio`
+
+**Código:**  
+https://github.com/trifuerza-Yumplace/Yumplace
 
 ---
 
-## 📩 Contact Section
+## 🛠️ Stack tecnológico
 
-<img src="public/contact.png" alt="Contact Section Preview" width="100%" />
+### Frontend
+
+- React
+- JavaScript
+- HTML
+- CSS
+- Tailwind CSS
+- Vite
+
+### Backend y APIs
+
+- Python
+- FastAPI
+- Java
+- REST APIs
+
+### Bases de datos y Cloud
+
+- Supabase
+- MySQL
+- Oracle
+- Firebase
+- Google Cloud
+
+### Herramientas
+
+- Git
+- GitHub
+- VS Code
+- Grafana
+- Android Studio
 
 ---
 
-# 🖥️ Portfolio Sections
+## 🖥️ Tecnologías utilizadas en este portfolio
 
-| Section | Description |
+| Tecnología | Uso |
 |---|---|
-| **Hero** | Intro section with animated elements, stats, and tech stack |
-| **About** | Personal bio, experience, and achievements |
-| **Tech Stack** | Technologies and tools overview |
-| **Skills** | Skill progress bars grouped by category |
-| **Projects** | Interactive and filterable project showcase |
-| **Services** | Services displayed in a responsive bento grid |
-| **Testimonials** | Rotating client and collaborator feedback |
-| **Contact** | Contact form with validation and social links |
+| **React** | Desarrollo de la interfaz |
+| **Vite** | Entorno de desarrollo y build |
+| **Tailwind CSS** | Estilos y diseño responsive |
+| **Lucide React** | Iconos de interfaz |
+| **React Icons** | Iconos de tecnologías y redes |
 
 ---
 
-# 🛠️ Built With
+## 📂 Estructura del proyecto
 
-| Technology | Purpose |
-|---|---|
-| **React 18** | Frontend framework |
-| **Vite** | Fast build tool and dev server |
-| **Tailwind CSS** | Utility-first styling |
-| **Lucide React** | Modern icon system |
-| **React Icons** | Brand & social media icons |
-
----
-
-# 🚀 Getting Started
-
-## Prerequisites
-
-Make sure you have installed:
-
-- Node.js `>=18`
-- npm or yarn
-
----
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/my-portfolio.git
-
-# Navigate into the project
-cd my-portfolio
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-Open:
-
-http://localhost:5173
-Production Build
-npm run build
-
-The production-ready files will be generated inside the dist/ directory.
-
-📁 Project Structure
-my-portfolio/
+```text
+portfolio/
 │
 ├── public/
 │   └── images/
-│       ├── projects/
-│       └── testimonials/
-│      
+│       └── projects/
 │
 ├── src/
 │   ├── components/
@@ -179,98 +132,103 @@ my-portfolio/
 ├── tailwind.config.js
 ├── vite.config.js
 └── package.json
-🎨 Customisation
-Update Personal Information
+```
 
-Modify the following files:
+---
 
-File	Content
-Hero.jsx	Name, badges, statistics
-AboutSection.jsx	Bio and achievements
-ContactSection.jsx	Email, location, social links
-Add Projects
+## ⚙️ Instalación y ejecución
 
-Edit the projects array inside:
+### Requisitos
 
-src/components/sections/ProjectsSection.jsx
+- Node.js
+- npm
 
-Example:
+### Clonar el repositorio
 
-{
-  title: "Project Name",
-  subtitle: "FULL STACK APP",
-  category: "Full Stack",
-  technologies: ["React", "Node.js"],
-  demoUrl: "https://demo.com",
-  githubUrl: "https://github.com/project"
-}
-Change Accent Colour
+```bash
+git clone https://github.com/carmen-bs/portfolio.git
+```
 
-Inside tailwind.config.js:
+Entrar en el proyecto:
 
-colors: {
-  accent: "#4ade80",
-}
+```bash
+cd portfolio
+```
 
-📦 Deployment
+Instalar las dependencias:
 
-▲ Vercel (Recommended)
+```bash
+npm install
+```
 
-npm install -g vercel
-vercel
-Netlify
+Iniciar el entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible normalmente en:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 📦 Build de producción
+
+Para generar una versión optimizada:
+
+```bash
 npm run build
+```
 
-Upload the generated dist/ folder to Netlify.
+Los archivos de producción se generarán en:
 
-GitHub Pages
-npm install --save-dev gh-pages
+```text
+dist/
+```
 
-Add this to package.json:
+También se puede comprobar el build localmente con:
 
-"deploy": "gh-pages -d dist"
+```bash
+npm run preview
+```
 
-Deploy:
+---
 
-npm run build && npm run deploy
+## ✨ Características
 
-📊 Performance & Design Goals
-⚡ Fast loading experience
-📱 Excellent mobile responsiveness
-♿ Accessible UI structure
-🎨 Modern UI/UX principles
-🔍 SEO-friendly architecture
-🚀 Optimised production builds
-🤝 Contributing
+- Diseño responsive.
+- Navegación mediante scroll suave.
+- Animaciones al mostrar las diferentes secciones.
+- Stack tecnológico visual.
+- Sección de skills organizada por categorías.
+- Carrusel y filtros de proyectos.
+- Sección de áreas de desarrollo.
+- Formulario de contacto.
+- Enlaces a GitHub y LinkedIn.
+- Descarga del CV.
+- Diseño oscuro con detalles en verde.
 
-Contributions, ideas, and feedback are welcome.
+---
 
-# Fork the repository
+## 📬 Contacto
 
-# Create your feature branch
-git checkout -b feature/amazing-feature
+Puedes encontrar más información sobre mi trabajo y mis proyectos en mi perfil de GitHub:
 
-# Commit changes
-git commit -m "Add amazing feature"
+https://github.com/carmen-bs
 
-# Push branch
-git push origin feature/amazing-feature
+También puedes utilizar la sección de contacto disponible en el portfolio.
 
-Then open a Pull Request.
+---
 
-📄 License
+## 📄 Créditos
 
-This project is licensed under the MIT License.
+Este portfolio está basado en una plantilla open source que posteriormente ha sido personalizada y adaptada a mi perfil, proyectos y tecnologías.
 
-Feel free to use this portfolio as inspiration for your own projects.
+Plantilla original:
 
-🙌 Connect With Me
+https://github.com/krif014/Portifolio
 
-💚 Built by Krif — free to customize and use for your own portfolio.
-
-🚀 Live Portfolio
-https://devportifolio-eta.vercel.app/
-
-⭐ If you like this project, consider giving it a star on GitHub.
-
- ```
+El diseño, contenido, secciones y datos han sido modificados para crear mi portfolio personal.
