@@ -1,21 +1,21 @@
 import {
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
+  SiJavascript,
+  SiPython,
   SiReact,
-  SiTailwindcss,
-  SiTypescript,
+  SiSupabase,
 } from "react-icons/si";
+
+import { Braces, ServerCog } from "lucide-react";
 import RadialGradientBackground from "../backgrounds/RadialGradientBackground";
 import ScrollReveal from "../animations/ScrollReveal";
 
 const items = [
-  { label: "React.js", Icon: SiReact },
-  { label: "Next.js", Icon: SiNextdotjs },
-  { label: "TypeScript", Icon: SiTypescript },
-  { label: "Tailwind CSS", Icon: SiTailwindcss },
-  { label: "Node.js", Icon: SiNodedotjs },
-  { label: "MongoDB", Icon: SiMongodb },
+  { label: "React", Icon: SiReact },
+  { label: "JavaScript", Icon: SiJavascript },
+  { label: "Python", Icon: SiPython },
+  { label: "FastAPI", Icon: ServerCog },
+  { label: "Supabase", Icon: SiSupabase },
+  { label: "Java", Icon: Braces },
 ];
 
 export default function TechStack() {
@@ -41,10 +41,10 @@ export default function TechStack() {
       <div className="relative  z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">
-            Tech Stack &amp; Expertise
+            Stack tecnológico
           </h2>
           <p className="mt-3 text-sm text-zinc-400 sm:text-base">
-            Technologies I work with to build amazing products
+            Principales tecnologías que utilizo en el desarrollo de mis proyectos.
           </p>
         </ScrollReveal>
 
