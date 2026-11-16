@@ -83,22 +83,22 @@ function SkillCard({ group, delayMs }) {
       <div
         className=" rounded-2xl p-6 transition-all duration-300"
         style={{
-          background: "rgba(74, 16, 36, 0.15)",
-          border: "1px solid rgba(190, 18, 60, 0.12)",
+          background: "rgb(var(--accent-dark-rgb) / 0.15)",
+          border: "1px solid rgb(var(--accent-rgb) / 0.12)",
         }}
         onMouseEnter={e => {
-          e.currentTarget.style.background = "rgba(74, 16, 36, 0.20)";
-          e.currentTarget.style.borderColor = "rgba(190, 18, 60, 0.30)";
+          e.currentTarget.style.background = "rgb(var(--accent-dark-rgb) / 0.20)";
+          e.currentTarget.style.borderColor = "rgb(var(--accent-rgb) / 0.30)";
         }}
         onMouseLeave={e => {
-          e.currentTarget.style.background = "rgba(74, 16, 36, 0.15)";
-          e.currentTarget.style.borderColor = "rgba(190, 18, 60, 0.12)";
+          e.currentTarget.style.background = "rgb(var(--accent-dark-rgb) / 0.15)";
+          e.currentTarget.style.borderColor = "rgb(var(--accent-rgb) / 0.12)";
         }}
       >
         <div className="flex items-center gap-3 mb-4">
           <span
             className="h-6 w-[3px] rounded-full shrink-0"
-            style={{ background: "linear-gradient(to bottom, #be123c, #9f1239)" }}
+            style={{ background: "linear-gradient(to bottom, var(--accent), var(--accent-intense))" }}
           />
           <h3 className="text-lg font-bold text-white">{group.title}</h3>
         </div>

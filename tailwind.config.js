@@ -19,9 +19,11 @@ export default {
       
       colors: {
         accent: {
-          DEFAULT: "#be123c",
-          muted: "#9f1239",
-          glow: "rgba(190, 18, 60, 0.25)",
+          DEFAULT: "rgb(var(--accent-rgb) / <alpha-value>)",
+          muted: "rgb(var(--accent-intense-rgb) / <alpha-value>)",
+          light: "rgb(var(--accent-light-rgb) / <alpha-value>)",
+          dark: "rgb(var(--accent-dark-rgb) / <alpha-value>)",
+          glow: "rgb(var(--accent-rgb) / 0.25)",
         },
         surface: {
           DEFAULT: "#121212",
@@ -32,8 +34,8 @@ export default {
         quicksand: ['Urbanist', 'sans-serif'],
       },
       boxShadow: {
-        glow: "0 0 40px rgba(190, 18, 60, 0.12)",
-        "glow-strong": "0 0 48px rgba(190, 18, 60, 0.22)",
+        glow: "0 0 40px rgb(var(--accent-rgb) / 0.12)",
+        "glow-strong": "0 0 48px rgb(var(--accent-rgb) / 0.22)",
       },
     },
   },
