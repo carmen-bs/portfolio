@@ -87,7 +87,7 @@ export default function ContactSection() {
               className="pointer-events-none absolute inset-0 z-0"
               style={{
                 background:
-                  "radial-gradient(ellipse at top right, rgba(190,18,60,0.18) 0%, rgba(190,18,60,0.06) 35%, transparent 70%)",
+                  "radial-gradient(ellipse at top right, rgb(var(--accent-rgb) / 0.18) 0%, rgb(var(--accent-rgb) / 0.06) 35%, transparent 70%)",
               }}
               aria-hidden
             />
@@ -171,7 +171,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={!isFormFilled}
-                className="group mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-muted via-emerald-70 to-accent px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-40"
+                className="group mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-muted via-accent-light to-accent px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Enviar mensaje
                 <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -183,7 +183,7 @@ export default function ContactSection() {
                 </p>
               )}
               {error && !sent && (
-                <p className="mt-4 rounded-xl border border-rose-400/30 bg-rose-500/10 px-4 py-3 text-center text-sm text-rose-200">
+                <p className="mt-4 rounded-xl border border-accent-light/30 bg-accent/10 px-4 py-3 text-center text-sm text-accent-light">
                   {error}
                 </p>
               )}
