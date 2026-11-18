@@ -39,7 +39,7 @@ const projects = [
     displayCategory: "Full Stack",
     description:
       "Aplicación web para crear itinerarios urbanos personalizados. Integra mapas interactivos, cálculo de rutas, horarios y visualización de datos de aforo.",
-    image: "/images/projects/movilidad-urbana.png",
+    image: "/images/projects/Proyecto-Movilidad.png",
     category: "Full Stack",
     technologies: [
       "React",
