@@ -14,11 +14,31 @@ import ProjectCard from "../ui/ProjectCard";
 const projects = [
   {
     id: 1,
+    title: "Yumplace",
+    subtitle: "APLICACIÓN ANDROID",
+    displayCategory: "Desarrollo móvil",
+    description:
+      "Aplicación Android de recetas desarrollada en equipo. Permite publicar recetas, descubrir nuevas ideas e interactuar con otros usuarios mediante likes, comentarios y perfiles.",
+    image: "/images/projects/Proyecto-Yumplace.png",
+    category: "Desarrollo móvil",
+    technologies: [
+      "Java",
+      "Android",
+      "Spring Boot",
+      "PostgreSQL",
+      "Retrofit",
+    ],
+    metric: "",
+    demoUrl: "",
+    githubUrl: "https://github.com/trifuerza-Yumplace/Yumplace",
+  },
+  {
+    id: 2,
     title: "Movilidad Urbana",
     subtitle: "APLICACIÓN FULL STACK",
     displayCategory: "Full Stack",
     description:
-      "Aplicación web para generar itinerarios urbanos personalizados y visualizar datos de aforo por zonas. Integra rutas, horarios, mapas interactivos, autenticación y gestión de datos.",
+      "Aplicación web para crear itinerarios urbanos personalizados. Integra mapas interactivos, cálculo de rutas, horarios y visualización de datos de aforo.",
     image: "/images/projects/movilidad-urbana.png",
     category: "Full Stack",
     technologies: [
@@ -31,23 +51,6 @@ const projects = [
     metric: "",
     demoUrl: "https://movilidad-urbana-front.vercel.app/",
     githubUrl: "https://github.com/carmen-bs/movilidad-urbana-front",
-  },
-  {
-    id: 2,
-    title: "Yumplace",
-    subtitle: "APLICACIÓN ANDROID",
-    displayCategory: "Desarrollo móvil",
-    description:
-      "Aplicación Android desarrollada como proyecto final de DAM. Red social centrada en recetas donde los usuarios pueden publicar fotografías asociadas a recetas y compartirlas con sus seguidores.",
-    image: "/images/projects/yumplace.png",
-    category: "Desarrollo móvil",
-    technologies: [
-      "Java",
-      "Android Studio",
-    ],
-    metric: "",
-    demoUrl: "",
-    githubUrl: "https://github.com/trifuerza-Yumplace/Yumplace",
   },
 ];
 
